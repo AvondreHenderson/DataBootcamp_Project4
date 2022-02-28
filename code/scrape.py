@@ -9,18 +9,18 @@ import sys
 
 
 
-csv_path = "/Group6_Project4_data.csv"
+csv_path = "../data/Group6_Project4_data.csv"
 bb_players_df = pd.read_csv(csv_path)
 bb_players_df.head(10)
 
 #start_row=2000
 #end_row=10000
 
-start_row=sys.argv[1]
-end_row = sys.argv[2]
+start_row=int(sys.argv[1])
+end_row = int(sys.argv[2])
 
 for i in range(start_row,end_row):
-    print i
+    print (i)
 
 print("Startinng row",start_row, "Ending row", end_row) 
 
