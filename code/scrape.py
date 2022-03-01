@@ -35,7 +35,7 @@ for index, row in bb_players_df.iterrows():
     height=0
     weight=0
     position="NA"
-    print(index,"-" ,row['player_name'])
+#    print(index,"-" ,row['player_name'])
     if index < start_row:
         continue
     if index > end_row:
@@ -55,7 +55,7 @@ for index, row in bb_players_df.iterrows():
             
     print(sports_ref_player)
 #    sports_ref_player = first_last[0] + "-" + first_last[1] + "-1"
-    milliseconds = 200
+    milliseconds = 100
     seconds = 0.001 * milliseconds
     start_time = time.time()
     time.sleep(seconds)
@@ -77,9 +77,9 @@ for index, row in bb_players_df.iterrows():
             results = soup.find_all('div', id='info')
             #print(results[0])
             ptags = results[0].find_all('p')
-            print(ptags[0].contents[2].strip())
+#            print(ptags[0].contents[2].strip())
             position=ptags[0].contents[2].strip()
-            player_position.append(position)
+            print('Height tags',ptags[0].contents[3].contents[-1].strip())
             print(ptags[0].contents[3].contents[-1].strip())
             poop = ptags[0].contents[3].contents[-1].strip().replace("(","").replace(")","").replace("cm","").replace("kg","")
             print(poop)
@@ -89,11 +89,17 @@ for index, row in bb_players_df.iterrows():
                 weight=height_weight[1]
             elif len(height_weight) > 0 :
                 height=height_weight[0]
+            else:
+                height=-200
+                weight=-200
             
 #            height,weight = poop.split(",\xa0")
             print(height,"-" ,weight)
+            player_position.append(position)
+#            print('appended position:',len(player_position))
             player_height.append(height)
             player_weight.append(weight)
+#            print('appended weight:',len(player_weight))
             process_status.append("Success")
         else:
             print("Not Found in :",response.text)
@@ -105,13 +111,14 @@ for index, row in bb_players_df.iterrows():
             (type, value, tb) = sys.exc_info()
             err = "%s" % value
             process_status.append("Failure: Other Error")
+            print("Other Error")
             player_position.append(-100)
             player_height.append(-100)
             player_weight.append(-100)
-    
-    print(len(player_name),len(player_position),len(player_height),len(process_status))
-
-    import numpy as np
+#    print(len(player_name),len(player_position),len(player_height),len(process_status))
+    if len(player_name) != len(player_position):
+        break;
+import numpy as np
 player_add_info_dict = {"player_name":player_name,"year":year,"team":team,"player_position":player_position,"player_height":player_height,"player_weight":player_weight,"process_status":process_status}
 player_add_info_df=pd.DataFrame(data=player_add_info_dict)
 #process_status
