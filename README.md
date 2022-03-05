@@ -37,3 +37,7 @@ Draft_picks_precision_cw.csv - draft pick predictions picked using the class wei
 merged_data_file.csv - data file after merging height and weight data into the original file
 
 combined_data_set.csv - data file after we combined both pre-2022 and post-2022 data
+
+##Presentation##
+[basketball_project4.pptx](https://github.com/AvondreHenderson/DataBootcamp_Project4/files/8191316/basketball_project4.pptx)
+
