@@ -126,6 +126,6 @@ player_add_info_df=pd.DataFrame(data=player_add_info_dict)
 #player_add_info_df["process_status"] = np.where(player_add_info_df["process_status"] == "Success", "Success", "Failure")
 player_add_info_df.head()
 
-player_file = "player_add_info_"+str(start_row)+"_"+str(end_row)+".csv"
+player_file = "../data/player_add_info_"+str(start_row)+"_"+str(end_row)+".csv"
 print(player_file)
 player_add_info_df.to_csv(player_file)
