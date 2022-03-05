@@ -1,8 +1,8 @@
 body {
-    background: rgb(6,6,6);
-    background: -moz-linear-gradient(32deg, rgba(6,6,6,1) 0%, rgb(56, 3, 3) 21%, rgba(9,9,9,1) 66%, rgba(0,0,0,1) 100%, rgba(57,57,57,1) 100%);
-    background: -webkit-linear-gradient(32deg, rgba(6,6,6,1) 0%, #380303 21%, rgba(9,9,9,1) 66%, rgba(0,0,0,1) 100%, rgba(57,57,57,1) 100%);
-    background: linear-gradient(32deg, rgba(6,6,6,1) 0%, rgb(56, 3, 3) 21%, rgba(9,9,9,1) 66%, rgba(0,0,0,1) 100%, rgba(57,57,57,1) 100%);
+    background: rgb(221, 221, 221);
+    background: -moz-linear-gradient(32deg, rgb(152, 152, 152) 0%, rgb(255, 222, 222) 21%, rgb(255, 255, 255) 66%, rgb(187, 187, 187) 100%, rgb(198, 198, 198) 100%);
+    background: -webkit-linear-gradient(32deg, rgb(159, 159, 159) 0%, #ffe2e2 21%, rgb(255, 255, 255) 66%, rgb(190, 190, 190) 100%, rgb(219, 219, 219) 100%);
+    background: linear-gradient(32deg, rgb(193, 193, 193) 0%, rgb(255, 221, 221) 21%, rgb(255, 255, 255) 66%, rgb(215, 215, 215) 100%, rgb(226, 226, 226) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060606",endColorstr="#393939",GradientType=1);  
     background-attachment: fixed;
     background-size: cover;
@@ -14,17 +14,17 @@ body {
     justify-content: center;  
     align-items: center;  
     padding-top: 30px;
-    margin-left: -100px;
+    margin-left: -1000px;
 }
 .science{
   font-family: 'Poppins', serif;
     display: flex;  
     justify-content: center;  
     align-items: center;  
-    padding-top: 10px;
-    margin-top: -85px;
-    margin-left: 100px;
-    color: azure;
+    padding-top: 20px;
+    margin-top: -80px;
+    margin-left: -800px;
+    color: rgb(44, 44, 44);
 }
 
 .science3{
@@ -33,7 +33,7 @@ body {
     justify-content: center;  
     align-items: center;  
     padding-top: 30px;
-    color: azure;
+    color: rgb(44, 44, 44);
 }
 
 .science2{
@@ -57,7 +57,7 @@ body {
     display: flex;  
     justify-content: right;  
     align-items: center;  
-    color: rgb(159, 0, 61);
+    color: rgb(255, 171, 171);
     margin-right: -200px;
 }
 
@@ -156,4 +156,11 @@ transform: translateY(4px);
   border-radius: 10px;
 
 
+}
+
+.tab{
+  font-family: 'Poppins', serif;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
 }
